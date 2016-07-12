@@ -1,0 +1,27 @@
+{
+  "name": "protify",
+  "version": "0.1.0",
+  "description": "Uses ProtoBuf.js to transform .proto files",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "browserify -x protobufjs -x should -t ./index.js ./test/basic.test.js > test.js && mocha -r should test.js"
+  },
+  "keywords": [
+    "protobuf",
+    "browserify"
+  ],
+  "author": "Blake Friedman <blake.friedman@nanoporetech.com>",
+  "license": "MIT",
+  "dependencies": {
+    "protobufjs": "^5.0.1",
+    "through2": "^2.0.1"
+  },
+  "devDependencies": {
+    "browserify": "^13.0.1",
+    "mocha": "^2.5.3",
+    "should": "^9.0.2"
+  }
+}
